@@ -1,0 +1,73 @@
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="formProgressBar.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+<!-- https://www.jqueryscript.net/demo/Form-Completion-Progress-Bar/formProgressBar.jquery.js -->
+
+<style type="text/css">
+	.jQueryProgressFormBar > div{
+	    display: block;
+	    background: green;
+	    width: 0;
+      height: 10px;
+          -webkit-transition-property: width; /* Safari */
+    -webkit-transition-duration: 1s; /* Safari */
+    transition-property: width;
+    transition-duration: 1s;
+	}
+	.jQueryProgressFormBar > div.warn{
+	    background: yellow;
+	}
+	.jQueryProgressFormBar > div.error{
+	    background: red;
+	}
+  #FormData{
+
+  }
+</style>
+
+
+<div id="FormData">
+  <div id="jQueryProgressFormBar1"></div>
+  <form>
+    <div class="form-group">
+      <label for="firstName">First name</label>
+      <input name="firstname" type="text" id="firstName" placeholder="" value="sdff">
+    </div>
+    <div class="form-group">
+      <label for="MiddleName">Middle name</label>
+      <input name="MiddleName" type="text" id="MiddleName" placeholder="" value="fsds">
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last name</label>
+      <input name="lastName" type="text" id="lastName" placeholder="" value="sdfsdf">
+    </div>
+  </form>
+</div>
+
+
+<div id="FormData2">
+  <div id="jQueryProgressFormBar2"></div>
+  <form>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input name="email" type="text" id="email" placeholder="" value="">
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input name="phone" type="text" id="phone" placeholder="" value="sdff">
+    </div>
+    <div class="form-group">
+      <label for="address">Address</label>
+      <input name="address" type="text" id="address" placeholder="" value="">
+    </div>
+  </form>
+</div>
+
+
+
+<script type="text/javascript">
+	$("#FormData").formProgressBar({transitionTime: 500, id:'jQueryProgressFormBar1'});
+  $("#FormData2").formProgressBar({transitionTime: 500, id:'jQueryProgressFormBar2'});
+</script>
